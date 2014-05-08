@@ -7,7 +7,7 @@ It provides a `SemanticVersion` class and `@Version` annotation for specifying a
 
 ##Using JemVer
 
-Using JemVer to mark up your own packages is designed to be as easy as possible. JemVer provides the `@Version` annotation, which takes a `String` containing the package&rsquo;s semantic version. That&rsquo;s all you need to do to get startedmdash;just remember to update the version when your public API changes.
+Using JemVer to mark up your own packages is designed to be as easy as possible. JemVer provides the `@Version` annotation, which takes a `String` containing the package&rsquo;s semantic version. That&rsquo;s all you need to do to get started&mdash;just remember to update the version when your public API changes.
 
 	@Version("2.0.0")
 	package org.semver;
