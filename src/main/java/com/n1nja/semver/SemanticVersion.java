@@ -31,6 +31,22 @@ import com.n1nja.semver.internal.util.Classes;
  */
 public class SemanticVersion implements Comparable<SemanticVersion>, Serializable {
 	/**
+	 * A regular expression for validating build/prerelease identifiers. An
+	 * identifier is a non&#x2010;empty string of ASCII alphanumerics or
+	 * hyphen&#x2010;minus ({@code '-'}) characters. A purely numeric identifier
+	 * must not contain leading zeros.
+	 * 
+	 * @see #NUMERIC_PATTERN
+	 */
+	static public final Pattern IDENTIFIER_PATTERN;
+	/**
+	 * A regular expression defining acceptable numeric strings for version
+	 * numbers and additional identifiers. A numeric string must be
+	 * non&#x2010;negative and may not have leading zeros. All numeric strings
+	 * are represented in decimal form.
+	 */
+	static public final Pattern NUMERIC_PATTERN;
+	/**
 	 * A regular expression for validating Semantic SemanticVersion strings.
 	 * Contains matching groups for each major part:
 	 * <table>
@@ -74,9 +90,7 @@ public class SemanticVersion implements Comparable<SemanticVersion>, Serializabl
 	 */
 	static public final SemanticVersion SEMVER_VERSION;
 	static final String BUILD_SEPARATOR = "+";
-	static final Pattern IDENTIFIER_PATTERN;
 	static final String IDENTIFIER_SEPARATOR = ".";
-	static final Pattern NUMERIC_PATTERN;
 	static final String PRERELEASE_SEPARATOR = "-";
 	static final String VERSION_SEPARATOR = ".";
 	static private final String IDENTIFIER_LIST_REGEX;
