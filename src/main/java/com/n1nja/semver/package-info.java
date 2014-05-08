@@ -19,8 +19,8 @@
  * 2.0.0</a> specification.
  * 
  * @since 0.2.0
- * @version 0.2.0
+ * @version 0.2.1
  * @author Colin Haber
  */
-@Version("0.2.0")
+@Version("0.2.1")
 package com.n1nja.semver;

@@ -1,4 +1,4 @@
-# JemVer 0.2.0 &mdash; SemVer for Java
+# JemVer 0.2.1 &mdash; SemVer for Java
 
 [dgn1nja/JemVer](https://github.com/dgn1nja/JemVer)
 
@@ -17,6 +17,8 @@ As this is a package-level annotation, it needs to be declared in `package-info.
 Java also provides a method for specifying a specification version in `/META-INF/MANIFEST.MF`; this library uses that value as a fallback if no `@Version` annotation is present. This is also a good way to add semantic versioning to your packages if you don&rsquo;t want to introduce this library as a dependency.
 
 For people who need to read or handle semantic versions, the `SemanticVersion` class handles the bulk of the logic. `SemanticVersion` represents an immutable semantic version. The class provides methods implementing everything laid out in the spec, including precedence calculation with `compareTo(SemanticVersion)`. There&rsquo;s also the static methods `parse(String)` and `get(Package)` for creating SemanticVersion objects from strings or packages. It also includes a capturing regular expression for validating and parsing SemVer strings.
+
+As `SemanticVersion` is immutable, modifying versions is done through the `VersionBuilder`, which provides methods for basic modifications as well as SemVer&#x2010;compliant version increments.
 
 ##License
 
